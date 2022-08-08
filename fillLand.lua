@@ -1,4 +1,4 @@
-local robot_api = require("robot")
+local robot = require("robot")
 
 function buildLine()
     while (not robot.detectDown()) do
