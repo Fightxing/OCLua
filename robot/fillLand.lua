@@ -30,6 +30,14 @@ function finishTone()   -- 完成后提示
     end
 end
 
+function buildLine() -- 用于建造一整条线
+    while (not robot.detectDown()) do
+        switchInventory()
+        r.placeDown()
+        r.forward()
+    end
+end
+
 slot=1
 r.select(1)     -- 初始化物品栏选择
 
