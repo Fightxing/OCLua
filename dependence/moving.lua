@@ -1,13 +1,12 @@
+local r = require("robot")
 function turnL() -- 左转
-    robot.back()
-    robot.turnLeft()
-    robot.forward()
-    robot.turnLeft()
+    r.turnLeft()
+    r.forward()
+    r.turnLeft()
 end
 
 function turnR() -- 右转
-    robot.back()
-    robot.turnRight()
-    robot.forward()
-    robot.turnRight()
+    r.turnRight()
+    r.forward()
+    r.turnRight()
 end
