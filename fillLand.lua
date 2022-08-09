@@ -1,8 +1,8 @@
+-- 用于填造陆地
+
 local r = require("robot")
 dofile("dependence/moving.lua")
 dofile("dependence/building.lua")
-
-
 
 -- 判断机器人处于哪个角
 r.turnLeft()
