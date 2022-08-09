@@ -65,3 +65,4 @@ while 1 do
         break   -- 如果掉头之后还是有方块，说明建到边框了，可以停下了
     end
 end
+finishTone()
