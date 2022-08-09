@@ -1,29 +1,7 @@
+dofile("dependence/moving.lua")
+dofile("dependence/building.lua")
+
 local robot = require("robot")
-
-function buildLine()
-    while (not robot.detectDown()) do
-        if(robot.count()==0) then
-            slot=slot+1
-            robot.select(slot)  -- 如果这个物品栏的物品数量是 0（没了）就换到下一格子
-        end
-        robot.placeDown()
-        robot.forward()
-    end
-end
-
-function turnL()
-    robot.back()
-    robot.turnLeft()
-    robot.forward()
-    robot.turnLeft()
-end
-
-function turnR()
-    robot.back()
-    robot.turnRight()
-    robot.forward()
-    robot.turnRight()
-end
 
 -- 判断机器人处于哪个角
 robot.turnLeft()
