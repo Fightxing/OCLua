@@ -31,7 +31,7 @@ function finishTone()   -- 完成后提示
 end
 
 function buildLine() -- 用于建造一整条线
-    while (not robot.detectDown()) do
+    while (not r.detectDown()) do
         switchInventory()
         r.placeDown()
         r.forward()
