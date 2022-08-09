@@ -1,8 +1,37 @@
 -- 用于填造陆地
 
 local r = require("robot")
-dofile("dependence/moving.lua")
-dofile("dependence/building.lua")
+
+function turnL() -- 左转
+    r.turnLeft()
+    r.forward()
+    r.turnLeft()
+end
+
+function turnR() -- 右转
+    r.turnRight()
+    r.forward()
+    r.turnRight()
+end
+
+function switchInventory() -- 用于在当前物品栏物品用完后换到下一个物品栏
+    if(r.count()==0) then
+            slot=slot+1
+            r.select(slot) 
+        end
+end
+
+local c = require("component")
+
+function finishTone()   -- 完成后提示
+    tones = {261,293,329,349,392}
+    for i,v in ipairs(tones) do
+        c.computer.beep(v,sec)
+    end
+end
+
+slot=1
+r.select(1)     -- 初始化物品栏选择
 
 -- 判断机器人处于哪个角
 r.turnLeft()
